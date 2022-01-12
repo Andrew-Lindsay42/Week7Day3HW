@@ -1,9 +1,9 @@
 import React from "react";
 import MusicItem from "./MusicItem";
 
-const MusicList = ({music}) => {
-    const title = music['feed']['title']['label'];
-    const songs = (music['feed']['entry']).map((song, index) => {
+const MusicList = ({music, title}) => {
+    const songs = music.map((song, index) => {
+        // song.
         return <MusicItem song={song} key={index} position={index + 1}/>
     });
   
